@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-Canta_Book-569b311f-bba1-4daf-9592-e3afbee1807d</UserSecretsId>
+    <RootNamespace>Canta_Book</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1" />
+  </ItemGroup>
+
+</Project>
