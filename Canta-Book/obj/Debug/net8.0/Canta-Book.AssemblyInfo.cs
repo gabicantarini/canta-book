@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Canta-Book")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+637a2d4a5f7c641282f885b23b8c527d0c7b15b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Canta-Book")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Canta-Book")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
