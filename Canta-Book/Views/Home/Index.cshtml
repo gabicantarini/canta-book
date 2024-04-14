@@ -2,7 +2,38 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
+    @* <img class="card-img" src="@Url.Content("~/images/banner.jpg")" alt="Card image"> *@
+    <div class="card-img-overlay">
+        <h1 class="card-title">Canta Book Reads</h1>
+@*         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Last updated 3 mins ago</p> *@
+    </div>
 </div>
+<div class="card-group" style="text-align: center; margin-bottom:15px">
+    <div class="card">
+        @* <img class="card-img-top" src="@Url.Content("~/images/banner.jpg")" alt="Card image cap"> *@
+        <div class="card-body">
+            <h5 class="card-title">Books</h5>
+            <p class="card-text">Find a book to read! Last book updated 3 mins ago</p>
+            <button type="button" class="btn btn-dark">Lets read</button>
+        </div>
+    </div>
+    <div class="card">
+        @* <img class="card-img-top" src="../images/book.jpg" alt="Card image cap"> *@
+        <div class="card-body">
+            <h5 class="card-title">Books Reader</h5>
+            <p class="card-text">Last Book Community updated 3 mins ago</p>
+            <button type="button" class="btn btn-dark">Community</button>
+        </div>
+    </div>
+    <div class="card">
+        @* <img class="card-img-top" src=".../100px180/" alt="Card image cap"> *@
+        <div class="card-body">
+            <h5 class="card-title">Users</h5>
+            <p class="card-text">Last subscribed User updated 3 mins ago</p>
+            <button type="button" class="btn btn-dark">User Info</button>
+        </div>
+    </div>
+</div>
+
