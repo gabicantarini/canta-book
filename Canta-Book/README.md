@@ -25,9 +25,10 @@ IEFP Conteúdo: Formação 23046 - Programador de Informática
 ### **Upcoming** 💡
 - Clean Architecture
 - CQRS
-- Authentication and Authorization with JWT Bearer
+- Identity Page and DbContext
 - Unity tests: XUnit
 - Fluent Validation para validação de API
+- Authentication and Authorization with JWT Bearer **future
 
 # Author 
 <a href="https://www.linkedin.com/in/gabrielacantarini/">Gabriela Cantarini</a>
