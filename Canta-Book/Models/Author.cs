@@ -6,5 +6,6 @@
         public string AuthorName { get; set; }
 
         public Book WriterName { get; set; }
+        //public List<Book> ListBooks { get; set; }
     }
 }

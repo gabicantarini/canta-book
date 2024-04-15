@@ -1,0 +1,40 @@
+﻿@model Canta_Book.Models.Book
+@{
+    ViewData["Title"] = "Create";
+    List<Author>? lAuthor = ViewData["lAuthor"] as List<Author>;
+}
+
+<h1>Create</h1>
+
+<form action="/Books/Create" method="post">
+    <input asp-for="Description" class="form-control" required />
+    <input asp-for="Genre" class="form-control" required />
+    <input asp-for="BookTitle" class="form-control" required />
+
+    @if (lAuthor != null)
+    {
+        <select asp-for="AuthorID" class="form-control" required>
+            @{
+                <option value="">Selecione ...</option>
+                foreach (var item in lAuthor)
+                {
+                    <option value="@item.AuthorID">@item.AuthorName</option>
+                }
+            }
+        </select>
+    }
+    else
+    {
+        <span>
+            Não existem autores registados.
+        </span>
+    }
+
+
+
+
+
+    <button type="submit" class="btn btn-success">
+        gravar
+    </button>
+</form>
