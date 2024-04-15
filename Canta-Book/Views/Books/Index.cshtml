@@ -1,38 +1,35 @@
-﻿@{
+﻿@model IEnumerable<Canta_Book.Models.Book>
+@{
     ViewData["Title"] = "Home Page";
 }
 
+<div class="container min-widt">
+    <div class="row" style="height: 70px;text-align: center; margin-bottom:5px">
+        <button type="button" class="btn btn-secondary btn-sm col-sm" style="margin-left: 1150px;">Books Control</button>
+    </div>
+</div>
 <div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
     @* <img class="card-img" src="@Url.Content("~/images/banner.jpg")" alt="Card image"> *@
     <div class="card-img-overlay">
-        <h1 class="card-title">Books Library</h1>
+        <h1 class="card-title">Library</h1>
         @* <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <p class="card-text">Last updated 3 mins ago</p> *@
     </div>
 </div>
-<div class="card-group" style="text-align: center; margin-bottom:15px">
-    <div class="card">
-        @* <img class="card-img-top" src="@Url.Content("~/images/banner.jpg")" alt="Card image cap"> *@
-        <div class="card-body">
-            <h5 class="card-title">Book 1</h5>
-            <p class="card-text">Description 1</p>
-            <button type="button" class="btn btn-dark">Lets read</button>
-        </div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">@Html.DisplayNameFor(model => model.BookTitle) @Html.DisplayNameFor(model => model.Description)</div>
+        <button type="button" class="btn btn-primary btn-sm col-sm" style="margin: 0px 20px 0px 20px;">Criar</button>
+        <button type="button" class="btn btn-info btn-sm col-sm" style="margin: 0px 20px 0px 20px;">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm col-sm" style="margin: 0px 20px 0px 20px;">Remover</button>
     </div>
-    <div class="card">
-        @* <img class="card-img-top" src="../images/book.jpg" alt="Card image cap"> *@
-        <div class="card-body">
-            <h5 class="card-title">Book 2</h5>
-            <p class="card-text">Description 2</p>
-            <button type="button" class="btn btn-dark">Community</button>
-        </div>
-    </div>
-    <div class="card">
-        @* <img class="card-img-top" src=".../100px180/" alt="Card image cap"> *@
-        <div class="card-body">
-            <h5 class="card-title">Book 3</h5>
-            <p class="card-text">Description 3</p>
-            <button type="button" class="btn btn-dark">User Info</button>
-        </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">Book</div>
+        <button type="button" class="btn btn-primary btn-sm col-sm" style="margin: 0px 20px 0px 20px;">Criar</button>
+        <button type="button" class="btn btn-info btn-sm col-sm" style="margin: 0px 20px 0px 20px;">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm col-sm" style="margin: 0px 20px 0px 20px;">Remover</button>
     </div>
 </div>

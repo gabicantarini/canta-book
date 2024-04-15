@@ -2,9 +2,9 @@
 {
     public class User
     {
-        public int userID { get; set; } //PK
-        public string userName { get; set; }
-        public string mail { get; set; }
-        public List<Book> historic { get; set; }
+        public int UserID { get; set; } //PK
+        public string UserName { get; set; }
+        public string Mail { get; set; }
+        public List<Book> Historic { get; set; }
     }
 }

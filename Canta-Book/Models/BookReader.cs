@@ -2,16 +2,18 @@
 {
     public class BookReader
     {
-        public int bookReaderID { get; set; } //PK           
+        public int BookReaderID { get; set; } //PK           
         
-        public int bookID { get; set; }        
-        public int userID { get; set; }
-        public int bookRate { get; set; }        
-        public DateTime finishDate { get; set; }
-        public DateTime startDate { get; set; }
-        public string? bookComment { get; set; }
-        public List<Book>? bookTitle { get; set; } 
-        public List<User>? userName { get; set; } 
+        public int BookID { get; set; }
+        public Book Book { get; set; }
+        public int UserID { get; set; }
+        //public User User { get; set; }
+        public int BookRate { get; set; }        
+        public DateTime FinishDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public string? BookComment { get; set; }
+        public List<Book> BookTitle { get; set; } 
+        public List<User> UserName { get; set; } 
 
     }
 }

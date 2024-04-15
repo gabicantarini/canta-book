@@ -2,7 +2,9 @@
 {
     public class Author
     {
-        public int authorID { get; set; }
-        public string authorName { get; set; }
+        public int AuthorID { get; set; }
+        public string AuthorName { get; set; }
+
+        public Book WriterName { get; set; }
     }
 }
