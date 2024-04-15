@@ -1,0 +1,20 @@
+﻿@model Canta_Book.Models.User
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Criar Novo Usuário</h1>
+
+<form action="/Users/Create" method="post">
+    <label>Nome do usuário:</label>
+    <input asp-for="UserName" class="form-control mb-2" required />
+    <label>Email do usuário:</label>
+    <input asp-for="Mail" class="form-control mb-2" required />
+
+    <button type="submit" class="btn btn-primary">
+        gravar
+    </button>
+</form>
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

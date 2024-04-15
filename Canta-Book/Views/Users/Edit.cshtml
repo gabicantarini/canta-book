@@ -1,0 +1,21 @@
+﻿@model Canta_Book.Models.User
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar Usuário</h1>
+
+<form action="/Users/Edit" method="post">
+    <label>Nome:</label>
+    <input asp-for="UserName" class="form-control mb-2" required />
+    <label>Email:</label>
+    <input asp-for="Mail" class="form-control mb-2" required />
+
+    <button type="submit" class="btn btn-primary">
+        gravar
+    </button>
+</form>
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

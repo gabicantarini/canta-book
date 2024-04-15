@@ -7,11 +7,15 @@
 <h1>Edit</h1>
 
 <form action="/Books/Edit" method="post">
-    <input asp-for="Description" class="form-control" required />
-    <input asp-for="Genre" class="form-control" required />
+    
+    
+    <label>Nome do Livro:</label>
     <input asp-for="BookTitle" class="form-control" required />
+    <label>Descrição:</label>
+    <input asp-for="Description" class="form-control" required />
+    <label>Genero:</label>
+    <input asp-for="Genre" class="form-control" required />
     <input asp-for="BookID" class="form-control" required hidden />
-
 
     @if (lAuthor != null)
     {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a03pKlPx79fCN9lODoLtKWyBylLj5EEurQDhlSf4uUoguBNmTZs2dfYhzT+f8U5ZpsfUMxdAukHk/BB8djzQAA==",
+  "dgSpecHash": "yTPGGJpKzKHnM4ya18tWP539EKNJr6N+cdU4/VH1qqshQrhiCtwhKTTcjJzZyQJzMrCJuNScCZG2wnAypIChcA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\Canta-Book.csproj",
   "expectedPackageFiles": [
@@ -94,11 +94,11 @@
     "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
     "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
     "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.4\\microsoft.entityframeworkcore.analyzers.8.0.4.nupkg.sha512",
-    "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.1\\microsoft.entityframeworkcore.design.8.0.1.nupkg.sha512",
-    "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.2\\microsoft.entityframeworkcore.relational.8.0.2.nupkg.sha512",
+    "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.4\\microsoft.entityframeworkcore.design.8.0.4.nupkg.sha512",
+    "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.4\\microsoft.entityframeworkcore.relational.8.0.4.nupkg.sha512",
     "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.relational.design\\1.1.1\\microsoft.entityframeworkcore.relational.design.1.1.1.nupkg.sha512",
     "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.1\\microsoft.entityframeworkcore.sqlserver.8.0.1.nupkg.sha512",
-    "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.1\\microsoft.entityframeworkcore.tools.8.0.1.nupkg.sha512",
+    "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.4\\microsoft.entityframeworkcore.tools.8.0.4.nupkg.sha512",
     "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

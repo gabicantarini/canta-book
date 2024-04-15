@@ -14,6 +14,7 @@ namespace Canta_Book.Data
 
         public DbSet<Author> Author { get; set; }
         public DbSet<Book> Book { get; set; }
+        public DbSet<Canta_Book.Models.User> User { get; set; } = default!;
         //public DbSet<BookCategory> BookCategory { get; set; }
         //public DbSet<BookReader> BookReader { get; set; }
         //public DbSet<User> User { get; set; }
