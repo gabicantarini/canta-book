@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Canta_Book.Models.User>
+
+@{
+    ViewData["Title"] = "ManageUsers";
+}
+
+<h1>Gerenciamento de Usuários</h1>
+
+<p><a asp-action="Create">Criar novo Usuário</a> </p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mail)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mail)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UserID">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserID">Remover</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<a asp-action="Index">Voltar</a>

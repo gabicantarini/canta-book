@@ -22,16 +22,13 @@ namespace Canta_Book.Controllers
         {
 
             List<Book> lBook = await _context.Book
-            //.AsNoTracking() // para nao alocar o dado no banco de dados 
                 .ToListAsync();
 
             if (lBook is null)
             {
                 return BadRequest();
 
-
             }
-
 
             ViewBag.Message = message;
 

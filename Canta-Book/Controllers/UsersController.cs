@@ -34,31 +34,25 @@ namespace Canta_Book.Controllers
             return View(lUser);
         }
 
-        // GET: Users/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> ManageUsers()
         {
-            if (id == null)
+            var lUser = await _context.User
+                .ToListAsync();
+
+            if (lUser is null)
             {
-                return NotFound();
+                return BadRequest();
+
             }
 
-            var user = await _context.User
-                .FirstOrDefaultAsync(m => m.UserID == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return View();
+            return View(lUser);
         }
+
+
 
         // GET: Users/Create
         public async Task<IActionResult> Create()
         {
-            List<User> lUser = await _context.User
-                .ToListAsync();
-
-            ViewData["lUser"] = lUser;
            
             return View();
         }
@@ -70,7 +64,7 @@ namespace Canta_Book.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.Add(user);
+                _context.User.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -97,12 +91,8 @@ namespace Canta_Book.Controllers
 
         // POST: Users/Edit/5
         [HttpPost]
-        public async Task<IActionResult> Edit(int id,User user)
+        public async Task<IActionResult> Edit(User user)
         {
-            if (id != user.UserID)
-            {
-                return NotFound();
-            }
 
             if (ModelState.IsValid)
             {

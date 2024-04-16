@@ -4,16 +4,20 @@
     List<Author>? lAuthor = ViewData["lAuthor"] as List<Author>;
 }
 
-<h1>Create</h1>
+<h1>Incluir novo livro</h1>
 
 <form action="/Books/Create" method="post">
-    <input asp-for="Description" class="form-control" required />
-    <input asp-for="Genre" class="form-control" required />
-    <input asp-for="BookTitle" class="form-control" required />
+    <label>Nome:</label>
+    <input asp-for="BookTitle" class="form-control mb-2" required />
+    <label>Descrição:</label>
+    <input asp-for="Description" class="form-control mb-2" required />
+    <label>Genero:</label>
+    <input asp-for="Genre" class="form-control mb-2" required />
+
 
     @if (lAuthor != null)
     {
-        <select asp-for="AuthorID" class="form-control" required>
+        <select asp-for="AuthorID" class="form-control mb-2" required>
             @{
                 <option value="">Selecione ...</option>
                 foreach (var item in lAuthor)
@@ -31,9 +35,10 @@
     }
 
 
-
-
-    <button type="submit" class="btn btn-success">
+    <button type="submit" class="btn btn-primary mb-2">
         gravar
     </button>
 </form>
+<a asp-action="Index">Voltar</a>
+
+
