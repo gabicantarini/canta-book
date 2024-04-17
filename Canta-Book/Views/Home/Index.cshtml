@@ -2,37 +2,40 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
-    @* <img class="card-img" src="@Url.Content("~/images/banner.jpg")" alt="Card image"> *@
-    <div class="card-img-overlay">
-        <h1 class="card-title">Canta Book Reads</h1>
-@*         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">Last updated 3 mins ago</p> *@
-    </div>
-</div>
-<div class="card-group" style="text-align: center; margin-bottom:15px">
-    <div class="card">
-        @* <img class="card-img-top" src="@Url.Content("~/images/banner.jpg")" alt="Card image cap"> *@
-        <div class="card-body">
-            <h5 class="card-title">Livros</h5>
-            <p class="card-text">Nossa relação de livros disponíveis.</p>
-            <button type="button" class="btn btn-dark" onclick="location.href='@Url.Action("Index", "Books")'">Biblioteca</button>
+<div class="container">
+    <div class="container-md">
+        <div class="card">
+            <img class="card-img" src="@Url.Content("~/images/banneri.jpg")" alt="Card image">
         </div>
     </div>
-    <div class="card">
-        @* <img class="card-img-top" src="../images/book.jpg" alt="Card image cap"> *@
-        <div class="card-body">
-            <h5 class="card-title">Leitores Community</h5>
-            <p class="card-text">Comunidade Canta Book Reads</p>
-            <button type="button" class="btn btn-dark" onclick="location.href='@Url.Action("Index", "BookReaders")'">Community</button>
-        </div>
-    </div>
-    <div class="card">
-        @* <img class="card-img-top" src=".../100px180/" alt="Card image cap"> *@
-        <div class="card-body">
-            <h5 class="card-title">Users</h5>
-            <p class="card-text">Nossos usuários.</p>
-            <button type="button" class="btn btn-dark" onclick="location.href='@Url.Action("Index", "Users")'">Relação de usuários</button>
+    <div class="container-md mt-2">
+        <div class="card-group" style="text-align: center; margin-bottom:15px">
+            <div class="card">
+                <img class="card-img-top" src="@Url.Content("~/images/books.jpg")" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title" style="margin-top: 7px;">Livros</h5>
+                    <p class="card-text">Nossa relação de livros disponíveis</p>
+                    <button type="button" class="btn btn-dark" onclick="location.href='@Url.Action("Index", "Books")'">Biblioteca</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="@Url.Content("~/images/book-conexaocut1.jpg")" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Leitores Community</h5>
+                    <p class="card-text">Comunidade Canta Book Reads</p>
+                    <button type="button" class="btn btn-dark" onclick="location.href='@Url.Action("Index", "BookReaders")'">Comunidade</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="@Url.Content("~/images/peoplecut.jpg")" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Usuários</h5>
+                    <p class="card-text">Nossos usuários</p>
+                    <button type="button" class="btn btn-dark" onclick="location.href='@Url.Action("Index", "Users")'">
+                        Relação de usuários
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

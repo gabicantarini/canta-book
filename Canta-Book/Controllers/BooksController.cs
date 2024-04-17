@@ -103,7 +103,7 @@ namespace Canta_Book.Controllers
                 _context.Book.Update(book);
                 _context.SaveChanges();
 
-                return RedirectToAction(nameof(Index), new { message = "Sucesso !!!"});
+                return RedirectToAction(nameof(Index));
             }
             catch
             {

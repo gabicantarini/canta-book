@@ -13,6 +13,54 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\banner-img.jpg",
+      "PackagePath": "staticwebassets\\images\\banner-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\bannercopy.jpg",
+      "PackagePath": "staticwebassets\\images\\bannercopy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\banneri.jpg",
+      "PackagePath": "staticwebassets\\images\\banneri.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\bannerimg.jpg",
+      "PackagePath": "staticwebassets\\images\\bannerimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\bannerimg.pdf",
+      "PackagePath": "staticwebassets\\images\\bannerimg.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\book-conexao.jpg",
+      "PackagePath": "staticwebassets\\images\\book-conexao.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\book-conexaocut.jpg",
+      "PackagePath": "staticwebassets\\images\\book-conexaocut.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\book-conexaocut1.jpg",
+      "PackagePath": "staticwebassets\\images\\book-conexaocut1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\book.jpg",
+      "PackagePath": "staticwebassets\\images\\book.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\books.jpg",
+      "PackagePath": "staticwebassets\\images\\books.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\people.jpg",
+      "PackagePath": "staticwebassets\\images\\people.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\peoplecut.jpg",
+      "PackagePath": "staticwebassets\\images\\peoplecut.jpg"
+    },
+    {
       "Id": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

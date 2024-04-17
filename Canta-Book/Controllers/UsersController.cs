@@ -22,7 +22,7 @@ namespace Canta_Book.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            var lUser = await _context.User    
+            List<User> lUser = await _context.User    
                 .ToListAsync();
 
             if (lUser is null)
@@ -36,7 +36,7 @@ namespace Canta_Book.Controllers
 
         public async Task<IActionResult> ManageUsers()
         {
-            var lUser = await _context.User
+            List<User> lUser = await _context.User
                 .ToListAsync();
 
             if (lUser is null)
@@ -62,13 +62,21 @@ namespace Canta_Book.Controllers
         public async Task<IActionResult> Create(User user)
         {
 
-            if (ModelState.IsValid)
+            try
             {
-                _context.User.Add(user);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.User.Add(user);
+                    _context.SaveChanges();
+                }
+                return View(user);
             }
-            return View(user);
+            catch (Exception ex)
+            {
+                throw;
+            }
+ 
+
 
         }
 
@@ -76,16 +84,19 @@ namespace Canta_Book.Controllers
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            User? user = await _context.User
+                .Where(m => m.UserID == id)
+                .FirstOrDefaultAsync();
             if (id == null)
             {
                 return NotFound();
             }
 
-            var user = await _context.User.FindAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
+
             return View(user);
         }
 
@@ -131,17 +142,10 @@ namespace Canta_Book.Controllers
         }
 
         // POST: Users/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var user = await _context.User.FindAsync(id);
-            if (user != null)
-            {
-                _context.User.Remove(user);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return View();
         }
 
         private bool UserExists(int id)

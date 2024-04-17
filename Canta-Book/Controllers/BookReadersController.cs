@@ -1,4 +1,5 @@
 ﻿using Canta_Book.Data;
+using Canta_Book.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,10 +9,30 @@ namespace Canta_Book.Controllers
 
     public class BookReadersController : Controller
     {
-        // GET: BookReaders
-        public ActionResult Index()
+
+        private readonly ApplicationDbContext _context;
+
+        public BookReadersController(ApplicationDbContext context)
         {
-            return View();
+            _context = context;
+        }
+
+        // GET: BookReaders
+        public async Task<ActionResult> Index()
+        {
+
+            List<BookReader> lBookReader = await _context.BookReader
+                .Include(m => m.User)
+                .Include(m => m.Book)
+                .ToListAsync();
+
+            if (lBookReader is null)
+            {
+                return BadRequest();
+
+            }
+
+            return View(lBookReader);
         }
 
         // GET: BookReaders/Details/5
@@ -49,7 +70,6 @@ namespace Canta_Book.Controllers
 
         // POST: BookReaders/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
             try
@@ -68,19 +88,6 @@ namespace Canta_Book.Controllers
             return View();
         }
 
-        // POST: BookReaders/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+
     }
 }

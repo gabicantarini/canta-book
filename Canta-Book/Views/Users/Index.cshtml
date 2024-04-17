@@ -19,7 +19,7 @@
                 @Html.DisplayNameFor(model => model.Mail)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Historic)
+                @* @Html.DisplayNameFor(model => model.Historic) *@
             </th>
         </tr>
     </thead>
@@ -33,13 +33,8 @@
                 @Html.DisplayFor(modelItem => item.Mail)
             </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Historic)
+                    @* @Html.DisplayFor(modelItem => item.Historic) *@
                 </td>
-@*             <td>
-                <a asp-action="Edit" asp-route-id="@item.UserID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.UserID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.UserID">Delete</a>
-            </td> *@
         </tr>
 }
     </tbody>

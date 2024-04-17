@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Canta_Book.Models;
 
 
 namespace Canta_Book.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -15,8 +14,7 @@ namespace Canta_Book.Data
         public DbSet<Author> Author { get; set; }
         public DbSet<Book> Book { get; set; }
         public DbSet<User> User { get; set; }
-        //public DbSet<BookCategory> BookCategory { get; set; }
-        //public DbSet<BookReader> BookReader { get; set; }
+        public DbSet<BookReader> BookReader { get; set; } = default!;
 
     }
 }

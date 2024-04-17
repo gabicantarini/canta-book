@@ -26,12 +26,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Gabriela\source\repos\Canta-Book\Canta-Book
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Areas/Identity/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Views/BookReaders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Views/BookReaders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Views/BookReaders/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlcnNcVXNlclByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Views/Books/Create.cshtml]

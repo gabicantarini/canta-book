@@ -1,12 +1,115 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Canta_Book.Models.BookReader>
+
+@{
+    ViewData["Title"] = "Book Readers";
 }
 
 <div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
     @* <img class="card-img" src="@Url.Content("~/images/banner.jpg")" alt="Card image"> *@
     <div class="card-img-overlay">
-        <h1 class="card-title">Community</h1>
+        <h1 class="card-title">Comunidade</h1>
         @* <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <p class="card-text">Last updated 3 mins ago</p> *@
     </div>
 </div>
+
+<p>
+    <a asp-action="ManageUsers">Perfil</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Leitor
+            </th>
+            <th>
+                Livro
+            </th>
+            <th>
+                Começou a ler em
+            </th>
+            <th>
+                Terminou de ler em
+            </th>
+            <th>
+                Avaliação
+            </th>
+            <th>
+                Comentário
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.User?.UserName
+                </td>
+                <td>
+                    @item.Book?.BookTitle
+                </td>
+                <td>
+                    @item.StartDate
+                </td>
+                <td>
+                    @item.FinishDate
+                </td>
+                <td>
+                    @item.BookRate
+                </td>
+                <td>
+                    @item.BookComment
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
+    @* <img class="card-img" src="@Url.Content("~/images/banner.jpg")" alt="Card image"> *@
+    <div class="card-img-overlay">
+        <h1 class="card-title">Avaliações</h1>
+        @* <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Last updated 3 mins ago</p> *@
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Leitor
+            </th>
+            <th>
+                Livro
+            </th>
+            <th>
+                Avaliação
+            </th>
+            <th>
+                Comentário
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @* @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.User.UserName)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.Book.BookTitle)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.BookRate)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.BookComment)
+                </td>
+            </tr>
+        } *@
+    </tbody>
+</table>
+<a asp-controller="Home" asp-action="Index">Voltar</a>
