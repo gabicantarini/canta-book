@@ -11,6 +11,6 @@ namespace Canta_Book.Models
         public string UserName { get; set; }
         public string Mail { get; set; }
         //public List<Book>? Historic { get; set; }
-        public List<BookReader> Historic { get; set; }
+        //public List<BookReader> Historic { get; set; }
     }
 }

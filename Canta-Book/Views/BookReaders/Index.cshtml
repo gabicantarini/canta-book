@@ -4,112 +4,82 @@
     ViewData["Title"] = "Book Readers";
 }
 
-<div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
-    @* <img class="card-img" src="@Url.Content("~/images/banner.jpg")" alt="Card image"> *@
-    <div class="card-img-overlay">
-        <h1 class="card-title">Comunidade</h1>
-        @* <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">Last updated 3 mins ago</p> *@
+<div class="container">
+    <div class="container-md">
+        <div class="card">
+            <img class="card-img" src="@Url.Content("~/images/banner-img.jpg")" alt="Card image">
+        </div>
     </div>
-</div>
-
-<p>
-    <a asp-action="ManageUsers">Perfil</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Leitor
-            </th>
-            <th>
-                Livro
-            </th>
-            <th>
-                Começou a ler em
-            </th>
-            <th>
-                Terminou de ler em
-            </th>
-            <th>
-                Avaliação
-            </th>
-            <th>
-                Comentário
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @item.User?.UserName
-                </td>
-                <td>
-                    @item.Book?.BookTitle
-                </td>
-                <td>
-                    @item.StartDate
-                </td>
-                <td>
-                    @item.FinishDate
-                </td>
-                <td>
-                    @item.BookRate
-                </td>
-                <td>
-                    @item.BookComment
-                </td>
-            </tr>
+    <div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
+        <div class="card-img-overlay">
+            <h1 class="card-title">Relação de Livros</h1>
+        </div>
+    </div>
+    <p style="margin-left:10px"><a asp-action="Create">Escolher um livro</a> </p>
+    <div class="container-md mt-2">
+        <div class="card-group mt-2" style="text-align: center; margin-bottom:15px">
+            @foreach (var item in Model)
+        {                
+            <div class="card">
+                <img class="card-img-top" src="@Url.Content("~/images/books.jpg")" alt="Card image cap">
+                <div class="card-body">
+                        <h5 class="card-title" style="margin-top: 7px;">@item.Book.BookTitle</h5>
+                        <p class="card-text">@item.Book.Description</p>
+                </div>
+            </div>
         }
-    </tbody>
-</table>
-
-<div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
-    @* <img class="card-img" src="@Url.Content("~/images/banner.jpg")" alt="Card image"> *@
-    <div class="card-img-overlay">
-        <h1 class="card-title">Avaliações</h1>
-        @* <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">Last updated 3 mins ago</p> *@
+            <div class="card">
+                <img class="card-img-top" src="@Url.Content("~/images/books.jpg")" alt="Card image cap">
+                <div class="card-body">
+                        <h5 class="card-title">Livro 2</h5>
+                        <p class="card-text">Descrição 2</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="@Url.Content("~/images/books.jpg")" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Livro 2</h5>
+                    <p class="card-text">Descrição 2</p>
+                </div>
+            </div>
+        
+        </div>
     </div>
 </div>
+<div class="container">
+    <div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
+        <div class="card-img-overlay">
+            <h1 class="card-title">Relação de Usuários</h1>
+        </div>
+    </div>
+    <div class="container-md mt-2">
+        <div class="card-group" style="text-align: center; margin-bottom:15px">
+            @foreach (var item in Model)
+            {
+                <div class="card">
+                    <img class="card-img-top" src="@Url.Content("~/images/pessoa.jpg")" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" style="margin-top: 7px;">Gabriel Cantarini</h5>
+                        <p class="card-text">@item.Book.Description</p>
+                    </div>
+                </div>
+            }
+            <div class="card">
+                <img class="card-img-top" src="@Url.Content("~/images/pessoa.jpg")" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Leandro Cantarini</h5>
+                    <p class="card-text">Descrição 2</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="@Url.Content("~/images/pessoa.jpg")" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Luciano Cantarini</h5>
+                    <p class="card-text">Descrição 2</p>
+                </div>
+            </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Leitor
-            </th>
-            <th>
-                Livro
-            </th>
-            <th>
-                Avaliação
-            </th>
-            <th>
-                Comentário
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @* @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayNameFor(model => model.User.UserName)
-                </td>
-                <td>
-                    @Html.DisplayNameFor(model => model.Book.BookTitle)
-                </td>
-                <td>
-                    @Html.DisplayNameFor(model => model.BookRate)
-                </td>
-                <td>
-                    @Html.DisplayNameFor(model => model.BookComment)
-                </td>
-            </tr>
-        } *@
-    </tbody>
-</table>
-<a asp-controller="Home" asp-action="Index">Voltar</a>
+        </div>
+    </div>
+</div>
+<a asp-action="Index">Voltar</a>

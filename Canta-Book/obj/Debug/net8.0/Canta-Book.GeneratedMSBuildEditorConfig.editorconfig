@@ -30,8 +30,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Views/BookReaders/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Views/BookReaders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Views/BookReaders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Views/BookReaders/ManageBookReader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1JlYWRlcnNcTWFuYWdlQm9va1JlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Gabriela/source/repos/Canta-Book/Canta-Book/Views/BookReaders/UserProfile.cshtml]

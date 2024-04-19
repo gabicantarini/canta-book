@@ -35,6 +35,20 @@ namespace Canta_Book.Controllers
             return View(lBookReader);
         }
 
+        public async Task<ActionResult> ManageBookReader()
+        {
+            List<BookReader> lBookReader = await _context.BookReader
+                .ToListAsync();
+
+            if (lBookReader is null)
+            {
+                return BadRequest();
+
+            }
+
+            return View(lBookReader);
+        }
+
         // GET: BookReaders/Details/5
         public ActionResult Details(int id)
         {
@@ -42,38 +56,70 @@ namespace Canta_Book.Controllers
         }
 
         // GET: BookReaders/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+
+            List<BookReader> lBookReader = await _context.BookReader
+                .ToListAsync();
+            List<User> lUser = await _context.User
+                .ToListAsync();
+            List<Book> lBook = await _context.Book
+                .ToListAsync();
+
+            ViewData["lBookReader"] = lBookReader;
+            ViewData["lUser"] = lUser;
+            ViewData["lBook"] = lBook;
+
             return View();
         }
 
         // POST: BookReaders/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(BookReader bookReader)
         {
+
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.BookReader.Add(bookReader);
+                    _context.SaveChanges();
+                }
+
+                return View(bookReader);
             }
-            catch
+            catch(Exception ex)
             {
-                return View();
+                throw;
             }
         }
 
         // GET: BookReaders/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            BookReader? BookReader = await _context.BookReader
+                .Where(m => m.BookReaderID == id)
+                .FirstOrDefaultAsync();
+
+            List<BookReader> lBookReader = await _context.BookReader
+                .ToListAsync();
+
+            ViewData["lBookReader"] = lBookReader;
+
+            return View(BookReader);
+
         }
 
         // POST: BookReaders/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(BookReader bookReader)
         {
             try
             {
+                _context.BookReader.Update(bookReader);
+                _context.SaveChanges();
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -83,9 +129,34 @@ namespace Canta_Book.Controllers
         }
 
         // GET: BookReaders/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
+            var bookReader = await _context.BookReader.SingleOrDefaultAsync(b => b.BookReaderID == id);
+            try
+            {
+                if (bookReader is null)
+                {
+                    return NotFound();
+                }
+
+                _context.Remove(bookReader);
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // POST: BookReaders/Delete/5
+        [HttpPost]
+        public async Task<ActionResult> Delete(int id, IFormCollection collection)
+        {
+
             return View();
+
         }
 
 

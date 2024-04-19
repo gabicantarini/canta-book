@@ -2,42 +2,54 @@
 
 @{
     ViewData["Title"] = "Create";
+    List<User>? lUser = ViewData["lUser"] as List<User>;
+    List<Book>? lBook = ViewData["lBook"] as List<Book>;
 }
 
-<h1>Create</h1>
+<h1>Escolher livro</h1>
 
-<h4>BookReader</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="BookID" class="control-label"></label>
-                <select asp-for="BookID" class ="form-control" asp-items="ViewBag.BookID"></select>
+            <div class="form-group mb-2">
+                <label class="control-label">Usuário</label>
+                <select asp-for="User.UserName" class="form-control mb-2" required>
+                    @{
+                        <option value="">Selecione ...</option>
+                        foreach (var item in lUser)
+                        {
+                            <option value="@item.UserID">@item.UserName</option>
+                        }
+                    }
+                </select>
             </div>
-            <div class="form-group">
-                <label asp-for="UserID" class="control-label"></label>
-                <input asp-for="UserID" class="form-control" />
-                <span asp-validation-for="UserID" class="text-danger"></span>
+            <div class="form-group mb-2">
+                <label class="control-label">Livro</label>
+                <select asp-for="Book.BookTitle" class="form-control mb-2" required>
+                    @{
+                        <option value="">Selecione ...</option>
+                        foreach (var item in lBook)
+                        {
+                            <option value="@item.BookID">@item.BookTitle</option>
+                        }
+                    }
+                </select>
             </div>
-            <div class="form-group">
-                <label asp-for="BookRate" class="control-label"></label>
+            <div class="form-group mb-2">
+                <label class="control-label">Avaliação</label>
                 <input asp-for="BookRate" class="form-control" />
                 <span asp-validation-for="BookRate" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="FinishDate" class="control-label"></label>
-                <input asp-for="FinishDate" class="form-control" />
-                <span asp-validation-for="FinishDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StartDate" class="control-label"></label>
+            <div class="form-group mb-2">
+                <label class="control-label">Data</label>
                 <input asp-for="StartDate" class="form-control" />
                 <span asp-validation-for="StartDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="BookComment" class="control-label"></label>
+            <div class="form-group mb-2">
+                <label class="control-label">Comentário</label>
                 <input asp-for="BookComment" class="form-control" />
                 <span asp-validation-for="BookComment" class="text-danger"></span>
             </div>
@@ -49,6 +61,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar</a>
 </div>
 

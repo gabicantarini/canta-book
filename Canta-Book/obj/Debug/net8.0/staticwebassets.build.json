@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YSvIOWJYWE5J8uR0U8KGdg/f06yt1AsI90o33SA6vGI=",
+  "Hash": "GsVdVSlyyGNycTd1VxIzEuhyIWzsN6Fr3JrAicHExsQ=",
   "Source": "Canta-Book",
   "BasePath": "_content/Canta-Book",
   "Mode": "Default",
@@ -131,25 +131,6 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\bannercopy.jpg",
-      "SourceId": "Canta-Book",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\",
-      "BasePath": "_content/Canta-Book",
-      "RelativePath": "images/bannercopy.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\bannercopy.jpg"
-    },
-    {
       "Identity": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\banneri.jpg",
       "SourceId": "Canta-Book",
       "SourceType": "Discovered",
@@ -224,25 +205,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bannerimg.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\book.jpg",
-      "SourceId": "Canta-Book",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\",
-      "BasePath": "_content/Canta-Book",
-      "RelativePath": "images/book.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\book.jpg"
     },
     {
       "Identity": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\book-conexao.jpg",
@@ -357,6 +319,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\peoplecut.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\images\\pessoa.jpg",
+      "SourceId": "Canta-Book",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\",
+      "BasePath": "_content/Canta-Book",
+      "RelativePath": "images/pessoa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pessoa.jpg"
     },
     {
       "Identity": "C:\\Users\\Gabriela\\source\\repos\\Canta-Book\\Canta-Book\\wwwroot\\js\\site.js",

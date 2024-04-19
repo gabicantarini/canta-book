@@ -61,8 +61,7 @@ namespace Canta_Book.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    //book.AuthorID = 1;
-                    
+                    //book.AuthorID = 1;                    
                     _context.Book.Add(book);
                     _context.SaveChanges();
                 }

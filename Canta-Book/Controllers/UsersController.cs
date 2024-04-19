@@ -20,7 +20,7 @@ namespace Canta_Book.Controllers
         }
 
         // GET: Users
-        public async Task<IActionResult> Index()
+        public async Task<ActionResult> Index()
         {
             List<User> lUser = await _context.User    
                 .ToListAsync();
@@ -34,7 +34,7 @@ namespace Canta_Book.Controllers
             return View(lUser);
         }
 
-        public async Task<IActionResult> ManageUsers()
+        public async Task<ActionResult> ManageUsers()
         {
             List<User> lUser = await _context.User
                 .ToListAsync();
@@ -51,102 +51,83 @@ namespace Canta_Book.Controllers
 
 
         // GET: Users/Create
-        public async Task<IActionResult> Create()
+        public async Task<ActionResult> Create()
         {
-           
+            List<User> lUser = await _context.User
+                .ToListAsync();
+
+            ViewData["lUser"] = lUser;
+
             return View();
         }
 
         // POST: Users/Create
         [HttpPost]
-        public async Task<IActionResult> Create(User user)
+        public async Task<ActionResult> Create(User user)
         {
 
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    _context.User.Add(user);
-                    _context.SaveChanges();
-                }
-                return View(user);
+                _context.Add(user);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            catch (Exception ex)
-            {
-                throw;
-            }
- 
-
-
+            return View(user);
         }
 
 
         // GET: Users/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<ActionResult> Edit(int? id)
         {
             User? user = await _context.User
                 .Where(m => m.UserID == id)
                 .FirstOrDefaultAsync();
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            if (user == null)
-            {
-                return NotFound();
-            }
 
             return View(user);
         }
 
         // POST: Users/Edit/5
         [HttpPost]
-        public async Task<IActionResult> Edit(User user)
+        public ActionResult Edit(User user)
         {
 
-            if (ModelState.IsValid)
+            try
             {
-                try
-                {
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
+                _context.User.Update(user);
+                _context.SaveChanges();
 
-                    return RedirectToAction(nameof(Index));
-                }
-                catch 
-                {
-                    return View();
-                }
-                
+                return RedirectToAction(nameof(Index));
             }
-            return View();
+            catch
+            {
+                return View();
+            }
+
         }
 
         // GET: Users/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<ActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var user = await _context.User.SingleOrDefaultAsync(b => b.UserID == id);
 
-            var user = await _context.User
-                .FirstOrDefaultAsync(m => m.UserID == id);
-            if (user == null)
+            try
             {
-                return NotFound();
-            }
+                if (user is null)
+                {
+                    return NotFound();
+                }
 
-            return View(user);
+                _context.Remove(user);
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
         }
 
-        // POST: Users/Delete/5
-        [HttpPost]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            return View();
-        }
 
         private bool UserExists(int id)
         {

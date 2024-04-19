@@ -1,80 +1,54 @@
 ﻿@model IEnumerable<Canta_Book.Models.Book>
 @{
     ViewData["Title"] = "Home Page";
+    // List<Author>? lAuthor = ViewData["lAuthor"] as List<Author>;
 
     string? message = ViewBag.Message as string;
 }
 
-@{
-    if (!string.IsNullOrEmpty(message))
-    {
-        <span>
-        @message
-        </span>
 
-    }
-}
-
-<div class="container min-widt">
-    <div class="row" style="height: 70px;text-align: center; margin-bottom:5px">
-        <button type="button" class="btn btn-secondary btn-sm col-sm" style="margin-left: 1150px;">Books Control</button>
-    </div>
-</div>
 <div class="card bg-dark text-white" style="height: 70px;text-align: center; margin-bottom:15px">
-    @* <img class="card-img" src="@Url.Content("~/images/banner.jpg")" alt="Card image"> *@
     <div class="card-img-overlay">
         <h1 class="card-title">Biblioteca</h1>
-        @* <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">Last updated 3 mins ago</p> *@
     </div>
 </div>
-
+<p>
+    <a asp-action="Create">Criar</a>
+</p>
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Livro</th>
-            <th scope="col">Autor</th>
-            <th scope="col">Gênero</th>
-            <th scope="col">Descrição</th>
-            <th scope="col">Preço</th>
+            <th>Livro</th>
+@*          <th>Autor</th>
+            <th>Gênero</th> *@
+            <th>Descrição</th>
+@*             <th>Preço</th> *@
         </tr>
     </thead>
     <tbody>
-        @{
-            foreach (var item in Model)
-            {
-                <tr class="d-flex">
-                    <td>
-                        <strong>
-                            @item.BookTitle
-                        </strong>
-                    </td>
-                    <td>
-                        @item.Author
-                    </td>
-                    <td>
-                        @item.Genre
-                    </td>
-                    <td>
-                        @item.Description
-                    </td>
-                    <td>
-                        @item.Price
-                    </td>
-
-                    <td>
-                        <a href="/Books/Create/@item.BookID" type="button" class="btn btn-primary btn-sm col-sm" style="margin: 10px 20px 10px 20px;">Criar</a>
-                    </td>
-                    <td>
-                        <a href="/Books/Edit/@item.BookID" type="button" class="btn btn-info btn-sm col-sm" style="margin: 10px 20px 10px 20px;">Editar</a>
-                    </td>
-                    <td>
-                        <a href="/Books/Delete/@item.BookID" type="button" class="btn btn-danger btn-sm col-sm" style="margin: 10px 20px 10px 20px;">Remover</a>
-                    </td>
-                </tr>
-            }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookTitle)
+                </td>
+@*                 <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td> *@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+@*                 <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td> *@
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BookID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BookID">Delete</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
+<a asp-controller="Home" asp-action="Index">Voltar</a> 
 
 
